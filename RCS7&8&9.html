@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+           var Abc=function(){
+            var [ar,setar]=React.useState([{
+                
+                
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+               
+                },
+                {
+                "firstname": "laxmi",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "female",
+             
+                },
+                {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+              
+                },
+                {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+               
+                },
+                {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                
+                },
+                {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+               
+               
+            }])
+            return <div>{
+                <table border='1px'>
+                    <tbody>{
+                        ar.map((a)=>{
+                            return  <tr style={a.gender=="male"?{backgroundColor:"lightblue"}:{backgroundColor:"lightpink"}}>
+                                    <td>{a.firstname}</td>
+                                    <td>{a.lastname}</td>
+                                    <td>{a.age}</td>
+                                    <td>{a.gender}</td>
+                                </tr>
+                          
+                        })
+                    
+                    }</tbody>
+                </table>
+            
+            }</div>
+           }
+           ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+         var Abc=function(){
+            var [ar,setar]=React.useState([
+            {
+                
+                
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+               
+                },
+                {
+                "firstname": "laxmi",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "female",
+             
+                },
+                {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+              
+                },
+                {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+               
+                },
+                {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                
+                },
+                {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+               }
+            ])
+            
+            return <div style={{display:"flex",flexWrap:"wrap"}}>{
+                ar.map((a)=>{return <div style={{border:"1px solid",margin:"5px",padding:"20px", display:"flex"}}>
+                    <div style={a.gender=="male"?{backgroundColor:"lightblue",width:"200px"}:{backgroundColor:"lightpink",width:"200px"}}>
+                    <h3>Firstname :{a.firstname}</h3>
+                    <h3>Lastname: {a.lastname}</h3>
+                    <h3>Age: {a.age}</h3>
+                    <h3>Gender :{a.gender}</h3>
+                </div>
+                <div >{a.gender=="male"?<img style={{ width:"150px" }} src="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"/>:<img  style={{ width:"150px" }} src="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"/>}</div>
+            </div> })
+            }</div>
+        }
+        ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>
